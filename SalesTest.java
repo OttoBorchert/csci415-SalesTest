@@ -1,5 +1,5 @@
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
@@ -23,7 +23,7 @@ public class SalesTest {
       job.setReducerClass(SalesTestReducer.class);
 
       job.setOutputKeyClass(Text.class);
-      job.setOutputValueClass(FloatWritable.class);
+      job.setOutputValueClass(LongWritable.class);
 
       System.exit(job.waitForCompletion(true) ? 0 : 1);
    }
