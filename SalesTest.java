@@ -23,7 +23,7 @@ public class SalesTest {
       job.setReducerClass(SalesTestReducer.class);
 
       job.setOutputKeyClass(Text.class);
-      job.setOutputValueClass(LongWritable.class);
+      job.setOutputValueClass(Text.class);
 
       System.exit(job.waitForCompletion(true) ? 0 : 1);
    }
